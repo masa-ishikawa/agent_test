@@ -24,7 +24,10 @@ OCI Generative AI Agents ServiceでAIエージェントを構築するためのS
 
 作成したアカウントでオラクルクラウドにログインすると下記のトップページが表示されます。
 
-まず、右上赤枠のリージョンがGenerative AI Serviceを利用できるリージョンであることを確認してください。(今回は Chicagoリージョンになっているはずです。)
+まず、右上赤枠のリージョンがGenerative AI Serviceを利用できるリージョンであることを確認してください。
+> ⚠️ **注意:**  
+> 今回は **Chicago リージョン** を例にしていますが、**Ashburn リージョン** でも利用可能です。  
+> どちらを選んでも構いません。
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/109260/382d49c4-55fa-4702-884f-24638852545a.png)
 
@@ -228,8 +231,8 @@ Enter a user OCID : ocid1.user.oc1..aaaaaxxxxxxxxxxxx
 # ご自身のテナンシOCIDを入力しリターン。
 Enter a tenancy OCID:　ocid1.tenancy.oc1..aaaaaaaxxxxxxxxxx
 
-# ご自身の利用リージョンを入力しリターン。(今回はus-chicago-1です。)
-Enter a region by index or name : us-chicago-1
+# ご自身の利用リージョンのインデックス値を入力しリターン。
+Enter a region by index or name : (表示されるus-chicago-1のindex値)
 
 # RSAキーペアを作成します。「Y」でリターン。
 Do you want to generate a new API Signing RSA key pair? (If you decline you will be asked to supply the path to an existing key.) [Y/n]: Y
@@ -371,7 +374,7 @@ odscruntimeconfig      /opt/conda/envs/odscruntimeconfig
 この仮想環境に下記コマンドで必要なライブラリ(ADK)をインストールします
 
 ```bash
-pip install -U pip "oci[adk]“
+pip install -U pip "oci[adk]"
 ```
 
 今回のコードを実行する際のワークディレクトリを作成します。
