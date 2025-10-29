@@ -208,7 +208,6 @@ ocid1.user.oc1..aaaaaaa<中略>nqjja
 
 ```text
 ocid1.tenancy.oc1..aaaaaaaas<中略>vcmp4qsq
-
 ```
 
 次にOCICLIのセットアップです。ターミナルから下記コマンドを実行します。
@@ -216,6 +215,9 @@ ocid1.tenancy.oc1..aaaaaaaas<中略>vcmp4qsq
 ```bash
 oci setup config 
 ```
+
+💡: 下の画像では初期状態のパスですが、conda仮想環境のアクティブ直後のターミナル上のパスで実行しても問題ありません。
+
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/109260/41846de2-5232-4633-9808-7729bf2dd328.png)
 
@@ -286,6 +288,8 @@ APIキーが追加されていることが確認できます。
 
 認証ができるかどうかを確認します。
 Data Science Serviceの画面に戻り、terminalから下記コマンド(利用できるリージョンのリストを表示)を実行し、結果が表示されることを確認してください。
+
+💡: 設定反映まで5分弱ほどかかりますので少々お待ちだください☕
 
 ```bash
 (base) bash-4.4$ oci iam region list
@@ -385,6 +389,8 @@ cd ~/agents
 ```
 
 下記コードのagent_endpoint_idを前の手順でメモ帳に控えたOCIDに変更し、quickstart.pyとして保存してください。
+
+💡: ブラウザ上ではコピペすると文字化けしていますが、保存後にcatすると問題なく表示されるため問題ありません。
 
 
 ```python
